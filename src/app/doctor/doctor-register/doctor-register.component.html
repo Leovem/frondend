@@ -1,0 +1,16 @@
+<div class="doctor-register">
+    <h2>Registro de Doctor</h2>
+    <form [formGroup]="doctorForm" (ngSubmit)="onSubmit()">
+      <label for="userId">ID de Usuario</label>
+      <input id="userId" formControlName="userId" type="text" />
+  
+      <label for="specialtyId">ID de Especialidad</label>
+      <input id="specialtyId" formControlName="specialtyId" type="text" />
+  
+      <label for="licenseNumber">Número de Licencia</label>
+      <input id="licenseNumber" formControlName="licenseNumber" type="text" />
+  
+      <button type="submit" [disabled]="!doctorForm.valid">Registrar Doctor</button>
+    </form>
+  </div>
+  

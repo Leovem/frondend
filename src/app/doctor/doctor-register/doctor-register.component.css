@@ -1,0 +1,72 @@
+.doctor-register {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #e6f7ff; /* Fondo azul claro */
+  box-shadow: 0 6px 12px rgba(0, 102, 204, 0.2); /* Sombra azul */
+}
+
+.doctor-register h2 {
+  text-align: center;
+  color: #0066cc; /* Azul oscuro */
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.doctor-register label {
+  display: block;
+  margin-bottom: 8px;
+  color: #004d99; /* Azul medio */
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.doctor-register input[type="text"], 
+.doctor-register input[type="email"],
+.doctor-register input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #80c2ff; /* Azul suave */
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.doctor-register input[type="text"]:focus, 
+.doctor-register input[type="email"]:focus, 
+.doctor-register input[type="number"]:focus {
+  border-color: #0066cc; /* Azul oscuro en foco */
+  box-shadow: 0 0 8px rgba(0, 102, 204, 0.3); /* Resplandor en foco */
+  outline: none;
+}
+
+.doctor-register button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background-color: #33cc99; /* Verde vibrante */
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.doctor-register button[type="submit"]:hover {
+  background-color: #2ebf85; /* Verde más oscuro en hover */
+  transform: scale(1.02);
+}
+
+.doctor-register button[type="submit"]:disabled {
+  background-color: #cce7e0; /* Verde pálido cuando está deshabilitado */
+  cursor: not-allowed;
+}
+
+.doctor-register .form-group {
+  margin-bottom: 20px;
+}

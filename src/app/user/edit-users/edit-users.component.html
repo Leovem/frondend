@@ -1,0 +1,19 @@
+<div class="container">
+  <h2 class="title">Editar Usuario</h2>
+  <form (ngSubmit)="updateUser()" class="form-container">
+    <label for="username" class="label">Nombre de Usuario:</label>
+    <input type="text" id="username" [(ngModel)]="user.username" name="username" required class="input-field" />
+
+    <label for="email" class="label">Email:</label>
+    <input type="email" id="email" [(ngModel)]="user.email" name="email" required class="input-field" />
+
+    <label for="role" class="label">Rol:</label>
+    <select id="role" [(ngModel)]="user.role" name="role" class="input-field">
+      <option value="admin">Admin</option>
+      <option value="doctor">Doctor</option>
+      <option value="patient">Paciente</option>
+    </select>
+
+    <button type="submit" class="submit-btn">Actualizar Usuario</button>
+  </form>
+</div>

@@ -1,0 +1,57 @@
+body {
+    background-color: #f0f8ff; /* Color de fondo suave */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centrar verticalmente */
+  }
+  
+  .custom-form {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 300px; /* Ancho del formulario */
+  }
+  
+  h1 {
+    text-align: center;
+    color: #007acc; /* Color azul clínico */
+    margin-bottom: 20px; /* Espacio debajo del título */
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #007acc; /* Borde azul */
+    border-radius: 10px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluir padding y border en el ancho */
+    font-size: 16px;
+  }
+  
+  input:focus {
+    border-color: #005f99; /* Color de borde al enfocar */
+    outline: none; /* Quitar el borde azul predeterminado */
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007acc; /* Color del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 16px;
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave */
+  }
+  
+  button:hover {
+    background-color: #005f99; /* Color del botón al pasar por encima */
+  }
+  

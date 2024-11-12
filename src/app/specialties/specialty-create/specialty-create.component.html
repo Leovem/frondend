@@ -1,0 +1,12 @@
+<div>
+  <h2>Registrar Especialidad Médica</h2>
+  <form (ngSubmit)="onRegister()">
+    <label for="name">Nombre de la Especialidad:</label>
+    <input type="text" id="name" [(ngModel)]="specialty.name" name="name" required />
+    
+    <label for="description">Descripción:</label>
+    <textarea id="description" [(ngModel)]="specialty.description" name="description"></textarea>
+
+    <button type="submit">Registrar Especialidad</button>
+  </form>
+</div>

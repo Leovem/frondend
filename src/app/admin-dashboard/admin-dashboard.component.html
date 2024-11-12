@@ -1,0 +1,78 @@
+<div class="dashboard">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <h2>Admin Dashboard</h2>
+      <ul>
+        <li><a href="javascript:void(0);" class="menu-item" [class.active]="activeSection === 'users'" (click)="showSection('users')">Gestionar Usuarios</a></li>
+        <li><a href="javascript:void(0);" class="menu-item" [class.active]="activeSection === 'specialties'" (click)="showSection('specialties')">Gestionar Especialidades Médicas</a></li>
+        <li><a href="javascript:void(0);" class="menu-item" [class.active]="activeSection === 'doctors'" (click)="showSection('doctors')">Gestionar Medicos</a></li>
+      </ul>
+    </nav>
+  
+    <!-- Gestionar usuarios Content Area -->
+    <div class="content">
+      <div id="users-section" class="section" *ngIf="activeSection === 'users'">
+        <h3>Gestionar Usuarios</h3>
+        <button class="create-user-btn" (click)="goToCreateUser()">Crear Usuario</button>
+        <div class="user-list">
+          <div class="user-card" *ngFor="let user of users">
+            <div class="user-info">
+              <p>ID: {{ user.id }}</p>
+              <h3>{{ user.username }}</h3>
+              <p>{{ user.email }}</p>
+              <p>{{ user.role }}</p>
+              <p>{{ user.createdAt }}</p>
+            </div>
+            <div class="user-actions">
+              <button class="edit-btn" (click)="editUser(user)">✏️ Editar</button>
+              <button class="delete-btn" (click)="deleteUser(user)">🗑️ Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="doctors-section" class="section" *ngIf="activeSection === 'doctors'">
+        <h3>Gestionar Médicos</h3>  
+        <button class="add-doctor-btn" (click)="addDoctor()">+ Agregar Médico</button>    
+        <div class="doctor-list">
+            <div class="doctor-card" *ngFor="let doctor of doctors">
+                <div class="doctor-info">
+                    <h4>{{ doctor.doctorId }}</h4>
+                    <p>{{ doctor.user.username}}</p>
+                    <p>{{ doctor.specialty.name}}</p>
+                    <p>{{ doctor.licenseNumber }}</p>
+                    <p>{{ doctor.createdAt }}</p>
+                </div>
+                <div class="doctor-actions">
+                    <button class="edit-btn" (click)="editDoctor(doctor)">✏️ Editar</button>
+                    <button class="delete-btn" (click)="deleteDoctor(doctor)">🗑️ Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+      <!-- Gestionar especialidades Content Area -->
+      <div id="specialties-section" class="section" *ngIf="activeSection === 'specialties'">
+        <h3>Gestionar Especialidades Médicas</h3>  
+        <button class="add-specialty-btn" (click)="addSpecialty()">+ Agregar Especialidad</button>    
+        <div class="specialty-list">
+          <div class="specialty-card" *ngFor="let specialty of specialties">
+            <div class="specialty-info">
+              
+              <h4>{{ "id: " + specialty.specialtyId + " - " + specialty.name }}</h4>
+              <p>{{ specialty.description }}</p>
+            </div>
+            <div class="specialty-actions">
+              <!--<button class="edit-btn" (click)="editSpecialty(specialty)">✏️ Editar</button>-->
+              <!--<button class="delete-btn" (click)="deleteSpecialty(specialty)">🗑️ Eliminar</button>-->
+              <button class="view-doctors-btn" *ngIf="specialty?.specialtyId !== undefined" (click)="viewDoctors(specialty.specialtyId!)">👨‍⚕️ Ver médicos</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  

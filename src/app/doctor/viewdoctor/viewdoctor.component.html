@@ -1,0 +1,14 @@
+<div class="view-doctors-container">   
+    <div class="doctors-list">
+      <div class="doctor-card" *ngFor="let doctor of doctors">
+        <h3>ID: {{ doctor.doctorId }}</h3>
+        <h3>NOMBRE: {{ doctor.user.username }}</h3>
+        <p><strong>Número de licencia:</strong> {{ doctor.licenseNumber }}</p>
+        <p><strong>Especialidad:</strong> {{ doctor.specialty.name }}</p>
+        <!-- Puedes agregar más detalles del médico aquí -->
+      </div>
+    </div>
+  
+    <button class="back-button" (click)="goBack()">⬅️ Volver a Especialidades</button>
+  </div>
+  

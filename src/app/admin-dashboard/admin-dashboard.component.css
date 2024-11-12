@@ -1,0 +1,345 @@
+/* Sidebar styling */
+.sidebar {
+    width: 200px;
+    float: left;
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+    height: 100vh;
+  }
+  
+  .sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar ul li a:hover, .sidebar ul li a.active {
+    background-color: #34495e;
+    font-weight: bold;
+  }
+  
+
+  
+  .section {
+    display: none;
+  }
+  
+  #users-section,
+  #specialties-section,
+  #doctors-section {
+    display: block;
+  }
+  
+  .create-user-btn {
+    display: block;
+    margin: 10px auto 20px;
+    padding: 10px 20px;
+    background-color: #2a9d8f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+  }
+
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h3 {
+    text-align: center;
+    color: #4a90e2;
+    font-size: 24px;
+  }
+  
+  .user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .user-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .user-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .user-info h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .user-info p {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .user-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .edit-btn {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+
+  /*especialidades*/
+  #specialties-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7faff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    text-align: center;
+    color: #2a9d8f;
+    font-size: 24px;
+  }
+  
+  p {
+    text-align: center;
+    color: #555;
+    font-size: 16px;
+  }
+  
+  .add-specialty-btn {
+    display: block;
+    margin: 10px auto 20px;
+    padding: 10px 20px;
+    background-color: #2a9d8f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+  }
+  
+  .add-specialty-btn:hover {
+    background-color: #238b7a;
+  }
+  
+  .specialty-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .specialty-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .specialty-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .specialty-info h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .specialty-info p {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .specialty-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .edit-btn {
+    background-color: #2a9d8f;
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: #e76f51;
+    color: white;
+  }
+
+  .view-doctors-btn {
+    background-color: #1981e2;
+    color: white;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+
+  /*seccion doctores*/
+
+  /* Estilos para la sección de gestión de médicos */
+#doctors-section {
+  max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7faff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.add-doctor-btn {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-doctor-btn:hover {
+  background-color: #45a049;
+}
+
+.doctor-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.doctor-card {
+  width: 300px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+}
+
+.doctor-info h4 {
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 5px;
+}
+
+.doctor-info p {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 10px;
+}
+
+.doctor-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.doctor-actions button {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #007bff;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+  
